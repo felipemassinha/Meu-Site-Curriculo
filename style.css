@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+:root{
+      --bg-color1: #000;                  /* fundo da página */
+      --bg-color2: #2b0047; 
+      --cont-color: #101013;            /* quadrado mais claro */
+      --box-color: #222;                /* cor da box */
+      --text-color: #e5e7eb;             /* texto */
+      --neon: #a855f7;             /* roxo neon (cyberpunk) */
+      --neon-2: #7c3aed;           /* roxo mais escuro pra gradientes */
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 20px;
+    font-family: Calibri, Arial, sans-serif;
+    background: linear-gradient()90deg, var(--bg-color1), var(--bg-color2);
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+main {
+
+    color: var(--text-color);
+    max-width: 1200px;
+    margin: 0 auto;
+	margin-bottom: 50px;
+    margin-inline: auto;
+}
+.conteudo{
+    background-color: var(--cont-color);
+    padding: 20px;
+    margin-top: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.conteudo:hover{
+    transform: translateY(-5px);
+    box-shadow:
+     0 0 5px var(--neon),
+     0 0 10px var(--neon),
+     0 0 20px var(--neon);;
+}
+.conteudo h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+.box article{
+    flex: 1 1 320px;      /* cresce, encolhe, base ~320px */
+    padding: 20px;
+    background: var(--box-color);
+    
+}
+
+.box{
+    display: flex;        /* agora os <article> ficam lado a lado */
+    gap: 20px;
+    flex-wrap: wrap;      /* quebra para baixo no celular */
+    margin-bottom: 20px;
+    
+}
+
+.box p{
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+}
+
+p {
+    margin-top: 5px;
+    text-align: justify;
+}
+
+
+header, footer{
+    background: var(--neon-2);
+    padding-inline:16px;
+}
+
+
+nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;      /*faz os itens ficarem um do lado do outro*/
+    justify-content: space-between;
+    align-items: center;
+}
+.nome{
+    font-size: 50px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    padding-bottom: 16px;
+    color: var(--text-color);
+}
+.nome:hover {
+    transform: scale(1.1);
+    text-shadow:
+     0 0 5px var(--neon),
+     0 0 10px var(--neon),
+     0 0 20px var(--neon);
+}
+
+.nav-list{
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+.habilidades__{
+    display: flex;
+    gap: 32px;
+    align-items: center;    
+}
+.habilidades__ li{
+    text-align: center;
+    margin: 0 20px;
+    
+}
+.nav-list a{
+    font-size: 20px;
+    color: var(--text-color);
+    padding-block: 16px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.nav-list a:hover {
+    transform: scale(1.1);
+    text-shadow:
+     0 0 5px var(--neon),
+     0 0 10px var(--neon),
+     0 0 20px var(--neon);
+}
+#copy{
+    color: var(--text-color);
+}
