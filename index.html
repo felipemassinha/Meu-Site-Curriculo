@@ -1,116 +1,436 @@
-  <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link rel="stylesheet" type="text/css" href="style.css?v=1"><!--¨?v=1¨ faz o cache ser limpo na hora que ¨chama¨ o arquivo -->
-        <title>Felipe Carreira</title>
-    </head>
-    <body>
-        <!--Cabeçalho-->
-        <header>
-            <nav>
-                <a href="index.html" class="nome">Felipe Carreira</a>
-                <ul class="nav-list">
-                    <li><a href="#sobre-mim">Sobre mim</a></li>
-                    <li><a href="#formacao">Formacao</a></li>
-                    <li><a href="#objetivos">Objetivos</a></li>
-                    <li><a href="#habilidades">Habilidades</a></li>
-                    <li><a href="#contato">Contatos</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!--Conteudo Central do site-->
-        <main>
-            <!--Sobre Mim-->
-            <section id="#sobre-mim" class="conteudo">
-                <h1>Sobre mim: </h1>
-                <p>Sou estudante de <strong>Ciência da Computação</strong>, em busca da minha <strong>primeira oportunidade</strong> na área de tecnologia, com o objetivo de aplicar na prática os conhecimentos adquiridos ao longo da minha formação acadêmica. Tenho grande interesse em atuar como <strong>desenvolvedor back-end</strong> e também no campo de <strong>desenvolvimento de jogos</strong>, áreas que me motivam pela possibilidade de criar soluções criativas e impactantes. Sou <strong>dedicado</strong> e <strong>interessado em me atualizar constantemente</strong>. Tenho <strong>curiosidade</strong> por novas tecnologias, gosto de <strong>resolver problemas</strong> de forma lógica e estruturada e consigo trabalhar bem tanto de forma <strong>individual</strong> quanto em <strong>equipe</strong>. Além disso, valorizo a <strong>organização</strong> e o <strong>comprometimento</strong>, qualidades que busco levar para todos os projetos em que me envolvo. Embora ainda esteja construindo minhas experiências profissionais, estou preparado para desenvolver minhas habilidades técnicas e interpessoais ao longo da minha trajetória, buscando sempre contribuir de forma positiva para a equipe e para a empresa.
-                </p>
-            </section>
-            <!--Formaçao-->
-            <section id="#formacao"   class="conteudo">
-                <h1>Formaçao Academica</h1>
-                <!--Ensino Medio-->
-                <div class="box">
-                    <article>
-                        <div class="display">
-                            <p>Ensino Médio – Concluído</p>
-                            <p>Colégio Santa Rosa</p>
-                            <p>Conclusao: 2024</p>
-                        </div>
-                    </article>
-                    <!--Ensino Superior-->
-                    <article>
-                        <div>
-                            <p>Ciencia da Computaçao</p>
-                            <p>Faculdade Faci Wyden - Belém/PA</p>
-                            <p>Início: 2025 – Previsão de conclusão: 2029</p>
-                        </div>
-                    </article>
+<!doctype html>
+<html lang="pt-BR" class="fonte-pixel">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#100d17">
+    <meta name="color-scheme" content="dark">
+    <meta name="description" content="Portfólio de Felipe Carreira, estudante de Ciência da Computação com foco em desenvolvimento de sistemas, automação e análise de dados.">
+    <meta name="author" content="Felipe Carreira">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Felipe Carreira — Desenvolvedor de sistemas">
+    <meta property="og:description" content="Sistemas, automações e ideias que organizam o mundo digital.">
+    <meta property="og:image" content="assets/pixel-placeholders.png">
+    <meta property="og:image:alt" content="Ilustrações temporárias em pixel art sobre desenvolvimento, saúde, dados e automação">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Felipe Carreira — Desenvolvedor de sistemas">
+    <meta name="twitter:description" content="Sistemas, automações e ideias que organizam o mundo digital.">
+    <meta name="twitter:image" content="assets/pixel-placeholders.png">
+
+    <title>Felipe Carreira — Portfólio</title>
+    <link rel="icon" href="assets/pixel-placeholders.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Felipe Carreira",
+        "email": "mailto:felipecarreira07@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Belém",
+          "addressRegion": "PA",
+          "addressCountry": "BR"
+        },
+        "url": "https://github.com/felipecarreira07",
+        "sameAs": [
+          "https://github.com/felipecarreira07",
+          "https://www.linkedin.com/in/felipe-carreira-431590397/"
+        ],
+        "knowsAbout": [
+          "Desenvolvimento de sistemas",
+          "Automação",
+          "Análise de dados",
+          "Python",
+          "JavaScript"
+        ],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Faci Wyden"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="cabecalho-site" data-cabecalho>
+      <div class="cabecalho-interno container">
+        <a class="marca" href="#inicio" aria-label="Felipe Carreira — início">
+          <span class="marca-simbolo" aria-hidden="true">FC</span>
+          <span class="marca-nome">Felipe Carreira</span>
+        </a>
+
+        <div class="acoes-cabecalho">
+          <!-- <button class="botao-fonte" type="button" data-alternar-fonte aria-pressed="false" aria-label="Ativar fonte pixel">
+            <span class="amostra-fonte" aria-hidden="true">Aa</span>
+            <span class="texto-botao-fonte">Fonte pixel</span>
+          </button> -->
+
+          <button class="alternar-menu botao-pixel" type="button" aria-expanded="false" aria-controls="menu-principal">
+            <span class="icone-menu" aria-hidden="true"></span>
+            <span class="sr-only">Abrir menu</span>
+          </button>
+
+          <nav class="navegacao-site" id="menu-principal" aria-label="Navegação principal">
+            <a href="#sobre">Sobre</a>
+            <a href="#stacks">Stacks</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#trajetoria">Trajetória</a>
+            <a href="#contato">Contato</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="apresentacao container" id="inicio" aria-labelledby="titulo-principal">
+        <div class="conteudo-apresentacao">
+          <p class="rotulo-apresentacao"><span class="ponto-status" aria-hidden="true"></span> Disponível para novas oportunidades</p>
+          <h1 id="titulo-principal">Felipe <span>Carreira</span></h1>
+          <p class="frase-apresentacao">Desenvolvo sistemas, automações e ideias que organizam o mundo digital.</p>
+          <p class="intro-apresentacao">Estudante de Ciência da Computação em Belém, com foco em Python, desenvolvimento de software e análise de dados.</p>
+
+          <div class="acoes-apresentacao">
+            <a class="botao-pixel botao-pixel--principal" href="#projetos">Explorar projetos</a>
+            <a class="botao-pixel botao-pixel--secundario" href="#contato">Entrar em contato</a>
+          </div>
+
+          <ul class="links-apresentacao" aria-label="Links profissionais">
+            <li><a href="https://github.com/felipecarreira07" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.linkedin.com/in/felipe-carreira-431590397/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
+            <li><a href="assets/curriculo-felipe-carreira.pdf" target="_blank" rel="noopener">Currículo <span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+
+        <div class="visual-apresentacao" aria-label="Perfil resumido">
+          <div class="moldura-avatar">
+            <div class="pixel-imagem pixel-imagem--avatar" role="img" aria-label="Avatar temporário em pixel art para ser substituído pelo autorretrato de Felipe"></div>
+            <span class="etiqueta-temporaria">placeholder · 32×32</span>
+          </div>
+          <dl class="resumo-perfil">
+            <div><dt>Local</dt><dd>Belém · PA</dd></div>
+            <div><dt>Formação</dt><dd>Ciência da Computação</dd></div>
+            <div><dt>Conclusão</dt><dd>Prevista para 2028</dd></div>
+            <div><dt>Foco</dt><dd>Sistemas + automação</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="secao container revelar" id="sobre" aria-labelledby="titulo-sobre">
+        <div class="faixa-secao">
+          <span aria-hidden="true">01</span>
+          <h2 id="titulo-sobre">Sobre mim</h2>
+        </div>
+
+        <div class="grade-sobre conteudo-secao">
+          <div class="texto-sobre">
+            <p class="texto-destaque">Meu interesse por tecnologia começou pela curiosidade de entender como funcionavam os jogos e sistemas que eu utilizava.</p>
+            <p>Quando comecei a estudar programação, percebi que poderia ir além de usar essas ferramentas e passar a construir minhas próprias soluções. Foi esse processo de aprender, testar e entender a lógica por trás das coisas que me fez continuar na área.</p>
+            <p>Atualmente curso o quarto semestre de Ciência da Computação e concentro meus estudos em Python, automação e análise de dados. Ainda estou no início da minha trajetória profissional e procuro uma oportunidade de estágio ou desenvolvimento júnior para aprender com projetos reais e continuar fortalecendo minha base técnica.</p>
+          </div>
+
+          <aside class="resumo-sobre" aria-label="Momento atual">
+            <p class="rotulo-painel">Neste momento</p>
+            <dl>
+              <div><dt>Faculdade</dt><dd>4º semestre</dd></div>
+              <div><dt>Estudos</dt><dd>Python, automação e dados</dd></div>
+              <div><dt>Objetivo</dt><dd>Primeira oportunidade na área</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="secao container revelar" id="stacks" aria-labelledby="titulo-stacks">
+        <div class="faixa-secao">
+          <span aria-hidden="true">02</span>
+          <h2 id="titulo-stacks">Stacks & ferramentas</h2>
+        </div>
+
+        <div class="conteudo-secao">
+          <div class="introducao-secao">
+            <p>Selecione uma tecnologia para conhecer meu contexto de uso, ferramentas relacionadas e o espaço reservado para um projeto de destaque.</p>
+            <p class="dica-interacao"><span aria-hidden="true">↙</span> Clique ou navegue com o teclado</p>
+          </div>
+
+          <div class="seletor-stacks" role="group" aria-label="Selecione uma tecnologia" data-seletor-stacks>
+            <button class="botao-stack esta-ativo" type="button" data-tecnologia="python" data-nome="Python" aria-label="Python" aria-pressed="true">
+              <span class="icone-pixel-stack icone-pixel-stack--python" aria-hidden="true">PY</span>
+              <span class="sr-only">Python</span>
+            </button>
+            <button class="botao-stack" type="button" data-tecnologia="javascript" data-nome="JavaScript" aria-label="JavaScript" aria-pressed="false">
+              <span class="icone-pixel-stack icone-pixel-stack--javascript" aria-hidden="true">JS</span>
+              <span class="sr-only">JavaScript</span>
+            </button>
+            <button class="botao-stack" type="button" data-tecnologia="sql" data-nome="SQL" aria-label="SQL" aria-pressed="false">
+              <span class="icone-pixel-stack" aria-hidden="true">SQL</span>
+              <span class="sr-only">SQL</span>
+            </button>
+            <button class="botao-stack" type="button" data-tecnologia="web" data-nome="HTML e CSS" aria-label="HTML e CSS" aria-pressed="false">
+              <span class="icone-pixel-stack" aria-hidden="true">&lt;/&gt;</span>
+              <span class="sr-only">HTML e CSS</span>
+            </button>
+            <button class="botao-stack" type="button" data-tecnologia="gamemaker" data-nome="GameMaker" aria-label="GameMaker" aria-pressed="false">
+              <span class="icone-pixel-stack" aria-hidden="true">GM</span>
+              <span class="sr-only">GameMaker</span>
+            </button>
+          </div>
+
+          <div class="painel-stack" data-painel-stack aria-live="polite">
+            <div>
+              <p class="rotulo-painel" data-rotulo-stack>Linguagem principal</p>
+              <h3 data-titulo-stack>Python</h3>
+              <p data-descricao-stack>É a linguagem em que tenho mais segurança e na qual concentro meus estudos de automação, desenvolvimento e análise de dados.</p>
+            </div>
+            <div>
+              <h4>Ecossistema</h4>
+              <ul class="lista-etiquetas" data-ferramentas-stack>
+                <li>FastAPI</li><li>JSON</li><li>Manipulação de arquivos</li>
+              </ul>
+            </div>
+            <div class="espaco-projeto-stack">
+              <span>Projeto relacionado</span>
+              <strong data-projeto-stack>Em definição</strong>
+              <small>Área preparada para receber um case futuro.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="secao container revelar" id="projetos" aria-labelledby="titulo-projetos">
+        <div class="faixa-secao">
+          <span aria-hidden="true">03</span>
+          <h2 id="titulo-projetos">Projetos</h2>
+        </div>
+
+        <div class="conteudo-secao">
+          <div class="cabecalho-projetos">
+            <div>
+              <p class="texto-destaque">Ideias em movimento</p>
+              <p>O trilho cresce com novos projetos sem quebrar a estrutura da página.</p>
+            </div>
+            <div class="controles-carrossel" aria-label="Controles dos projetos">
+              <button class="botao-icone" type="button" data-projeto-anterior aria-label="Ver projetos anteriores">←</button>
+              <button class="botao-icone" type="button" data-proximo-projeto aria-label="Ver próximos projetos">→</button>
+            </div>
+          </div>
+
+          <div class="trilho-projetos" data-trilho-projetos tabindex="0" aria-label="Lista horizontal de projetos">
+            <article class="cartao-projeto" data-projeto="consultas" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="modal-projeto" aria-label="Abrir detalhes do projeto Organização de consultas">
+              <div class="imagem-projeto pixel-imagem pixel-imagem--saude" role="img" aria-label="Ilustração temporária de um calendário médico em pixel art">
+                <span>imagem temporária</span>
+              </div>
+              <div class="corpo-projeto">
+                <div class="metadados-projeto"><span class="etiqueta-status etiqueta-status--planejado">Planejado</span><span>Voluntário</span></div>
+                <h3>Organização de consultas</h3>
+                <p>Software para organizar consultas em diferentes áreas da saúde, mantendo o foco no fluxo de atendimento e na privacidade das pessoas.</p>
+                <dl class="fatos-projeto">
+                  <div><dt>Participação</dt><dd>A definir com a equipe</dd></div>
+                  <div><dt>Tecnologias</dt><dd>A definir</dd></div>
+                </dl>
+                <span class="acao-cartao-projeto" aria-hidden="true">Ver detalhes <strong>+</strong></span>
+              </div>
+            </article>
+
+            <article class="cartao-projeto" data-projeto="bi" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="modal-projeto" aria-label="Abrir detalhes do Projeto de BI acadêmico">
+              <div class="imagem-projeto pixel-imagem pixel-imagem--bi" role="img" aria-label="Ilustração temporária de um painel de dados em pixel art">
+                <span>imagem temporária</span>
+              </div>
+              <div class="corpo-projeto">
+                <div class="metadados-projeto"><span class="etiqueta-status etiqueta-status--andamento">Em desenvolvimento</span><span>Acadêmico</span></div>
+                <h3>Projeto de BI acadêmico</h3>
+                <p>Trabalho extensionista voltado à construção de um BI para uma empresa fictícia, reunindo planilhas, gráficos e informações para análise.</p>
+                <dl class="fatos-projeto">
+                  <div><dt>Objetivo</dt><dd>Organizar e visualizar dados</dd></div>
+                  <div><dt>Tecnologias</dt><dd>A confirmar</dd></div>
+                </dl>
+                <span class="acao-cartao-projeto" aria-hidden="true">Ver detalhes <strong>+</strong></span>
+              </div>
+            </article>
+
+            <article class="cartao-projeto cartao-projeto--temporario" data-projeto="futuro" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="modal-projeto" aria-label="Abrir detalhes do espaço para o próximo projeto">
+              <div class="imagem-projeto pixel-imagem pixel-imagem--automacao" role="img" aria-label="Ilustração temporária de engrenagens e automação em pixel art">
+                <span>imagem temporária</span>
+              </div>
+              <div class="corpo-projeto">
+                <div class="metadados-projeto"><span class="etiqueta-status">Próximo slot</span><span>Autoral</span></div>
+                <h3>Seu próximo projeto</h3>
+                <p>Espaço reservado para um projeto que represente seu foco em Python, automação ou desenvolvimento de sistemas.</p>
+                <dl class="fatos-projeto">
+                  <div><dt>Problema</dt><dd>A definir</dd></div>
+                  <div><dt>Repositório</dt><dd>A adicionar</dd></div>
+                </dl>
+                <span class="acao-cartao-projeto" aria-hidden="true">Ver detalhes <strong>+</strong></span>
+              </div>
+            </article>
+          </div>
+          <p class="nota-rolagem"><span aria-hidden="true">↔</span> Arraste ou use as setas para navegar pelos projetos.</p>
+
+          <dialog class="modal-projeto" id="modal-projeto" data-modal-projeto aria-labelledby="titulo-modal-projeto">
+            <div class="conteudo-modal-projeto">
+              <button class="fechar-modal-projeto" type="button" data-fechar-modal aria-label="Fechar detalhes do projeto">×</button>
+              <div class="imagem-modal-projeto pixel-imagem" data-imagem-modal role="img"></div>
+              <div class="corpo-modal-projeto">
+                <div class="metadados-projeto">
+                  <span class="etiqueta-status" data-status-modal></span>
+                  <span data-tipo-modal></span>
                 </div>
-            </section>
-            <!--Objetivos-->
-            <section id="objetivos" class="conteudo">
-                <h1>Objetivos Profissionais</h1>
-                <p> Pretendo iniciar minha trajetória profissional na área de tecnologia,
-                    desenvolvendo experiência em <strong>back-end</strong> e também em
-                    <strong>desenvolvimento de jogos</strong>. Busco uma primeira oportunidade
-                    para aplicar meus conhecimentos acadêmicos, aprender com profissionais mais
-                    experientes e crescer junto com a equipe.
-                </p>
-            </section>
-            <!--Habilidades-->
-            <section id="habilidades" class="conteudo">
-                <h1>Habilidades</h1>
-                <ul class="habilidades__">
-                    <li>Conhecimentos básicos de lógica de programação e desenvolvimento</li>
-                    <li>Interesse em linguagens como Python, C, C#, Java e JavaScript</li>
-                    <li>Organização e dedicação</li>
-                    <li>Facilidade em aprender e se adaptar</li>
-                    <li>Trabalho em equipe e boa comunicação</li>
-                </ul>
-            </section>
-        </main>
-        <footer id=¨contato¨>
-            <nav>
-                <p id="copy">© 2025 Desenvolvido por Felipe Carreira. Todos os direitos reservados.</p>
-                <ul class="nav-list">
-                    <li><!--Linkedin-->
-                        <a href="https://www.linkedin.com/in/felipe-carreira-9b0b5b365/" target="_blank">
-                            <i class="fa-brands fa-linkedin fa-3x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <!--Whatsapp-->
-                        <a href="http://wa.me/5591986303982" target="_blank">
-                            <i class="fa-brands fa-square-whatsapp fa-3x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <!--GitHub-->
-                        <a href="https://github.com/felipemassinha" target="_blank">
-                            <i class="fa-brands fa-square-github fa-3x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <!--Instagram-->
-                        <a href="https://www.instagram.com/ca.felpsss/" target="_blank">
-                            <i class="fa-brands fa-square-instagram fa-3x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <!--Gmail-->
-                        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=felipecarreira2020@gmail.com&amp;su=Assunto%20aqui&amp;body=Corpo%20do%20email" target="_blank">
-                            <i class="fa-solid fa-square-envelope fa-3x"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </footer>
-    </body>
+                <p class="rotulo-painel">Detalhes do projeto</p>
+                <h3 id="titulo-modal-projeto" data-titulo-modal></h3>
+                <p class="resumo-modal-projeto" data-resumo-modal></p>
+                <div class="grade-detalhes-modal" data-detalhes-modal></div>
+              </div>
+            </div>
+          </dialog>
+        </div>
+      </section>
+
+      <section class="secao container revelar" id="trajetoria" aria-labelledby="titulo-trajetoria">
+        <div class="faixa-secao">
+          <span aria-hidden="true">04</span>
+          <h2 id="titulo-trajetoria">Trajetória</h2>
+        </div>
+
+        <div class="linha-tempo conteudo-secao">
+          <article class="item-linha-tempo">
+            <div class="marcador-linha-tempo" aria-hidden="true"></div>
+            <p class="data-linha-tempo">2024</p>
+            <div>
+              <h3>Conclusão do Ensino Médio</h3>
+              <p>Colégio Santa Rosa — encerramento de uma etapa e preparação para aprofundar os estudos em tecnologia.</p>
+            </div>
+          </article>
+          <article class="item-linha-tempo">
+            <div class="marcador-linha-tempo" aria-hidden="true"></div>
+            <p class="data-linha-tempo">2025 — 2028</p>
+            <div>
+              <h3>Ciência da Computação</h3>
+              <p>Graduação em andamento na Faci Wyden. Atualmente no quarto semestre, ampliando fundamentos de programação, dados e desenvolvimento de software.</p>
+            </div>
+          </article>
+          <article class="item-linha-tempo">
+            <div class="marcador-linha-tempo" aria-hidden="true"></div>
+            <p class="data-linha-tempo">Agora</p>
+            <div>
+              <h3>Extensão, dados e sistemas</h3>
+              <p>Desenvolvimento de um projeto acadêmico de BI e preparação para colaborar voluntariamente em um sistema de organização de consultas da área da saúde.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="secao container revelar" id="interesses" aria-labelledby="titulo-interesses">
+        <div class="faixa-secao">
+          <span aria-hidden="true">05</span>
+          <h2 id="titulo-interesses">Áreas de interesse</h2>
+        </div>
+
+        <div class="grade-areas conteudo-secao">
+          <article class="cartao-area">
+            <span aria-hidden="true">01</span>
+            <h3>Automação</h3>
+            <p>Reduzir tarefas repetitivas e organizar processos com soluções em Python.</p>
+          </article>
+          <article class="cartao-area">
+            <span aria-hidden="true">02</span>
+            <h3>Desenvolvimento de sistemas</h3>
+            <p>Entender como aplicações são estruturadas e como suas partes trabalham juntas.</p>
+          </article>
+          <article class="cartao-area">
+            <span aria-hidden="true">03</span>
+            <h3>Análise de dados</h3>
+            <p>Organizar informações e transformá-las em uma base mais clara para análise.</p>
+          </article>
+        </div>
+      </section>
+
+      <!--
+        SEÇÃO PREPARADA PARA O FUTURO
+        Para exibir cursos e certificados, remova este comentário e substitua os marcadores.
+
+        <section class="secao container revelar" id="certificados" aria-labelledby="titulo-certificados">
+          <div class="faixa-secao">
+            <span aria-hidden="true">06</span>
+            <h2 id="titulo-certificados">Cursos & certificados</h2>
+          </div>
+          <div class="conteudo-secao grade-certificados">
+            <article class="cartao-certificado">
+              <p class="rotulo-painel">[ANO]</p>
+              <h3>[NOME DO CURSO OU CERTIFICADO]</h3>
+              <p>[INSTITUIÇÃO] · [CARGA HORÁRIA]</p>
+              <a href="[LINK DO CERTIFICADO]">Ver credencial</a>
+            </article>
+          </div>
+        </section>
+      -->
+
+      <section class="secao container revelar" id="contato" aria-labelledby="titulo-contato">
+        <div class="faixa-secao">
+          <span aria-hidden="true">06</span>
+          <h2 id="titulo-contato">Vamos conversar?</h2>
+        </div>
+
+        <div class="grade-contato conteudo-secao">
+          <div class="texto-contato">
+            <p class="texto-destaque">Estou procurando uma oportunidade para começar no mercado e transformar estudo, curiosidade e iniciativa em experiência real.</p>
+            <p>Se você quiser conversar sobre estágio, desenvolvimento júnior, colaboração ou algum projeto, escolha o canal que preferir.</p>
+
+            <div class="links-contato">
+              <a href="mailto:felipecarreira07@gmail.com"><span>E-mail</span><strong>felipecarreira07@gmail.com</strong></a>
+              <a href="https://www.linkedin.com/in/felipe-carreira-431590397/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>Conectar e conversar ↗</strong></a>
+              <a href="https://github.com/felipecarreira07" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong>Ver perfil e repositórios ↗</strong></a>
+            </div>
+
+            <div class="acoes-curriculo">
+              <a class="botao-pixel botao-pixel--principal" href="assets/curriculo-felipe-carreira.pdf" target="_blank" rel="noopener">Visualizar currículo</a>
+              <a class="link-texto" href="assets/curriculo-felipe-carreira.pdf" download>Baixar PDF ↓</a>
+            </div>
+          </div>
+
+          <form class="formulario-contato" data-formulario-contato novalidate>
+            <div class="cabecalho-formulario">
+              <span class="pixels-formulario" aria-hidden="true"><i></i><i></i><i></i></span>
+              <p>Nova mensagem</p>
+            </div>
+            <div class="campo">
+              <label for="nome">Seu nome</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" required minlength="2" aria-describedby="erro-nome" placeholder="Como posso te chamar?">
+              <small class="erro-campo" id="erro-nome" data-erro-para="nome"></small>
+            </div>
+            <div class="campo">
+              <label for="email">Seu e-mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="erro-email" placeholder="voce@exemplo.com">
+              <small class="erro-campo" id="erro-email" data-erro-para="email"></small>
+            </div>
+            <div class="campo">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" required minlength="10" aria-describedby="erro-mensagem" placeholder="Conte um pouco sobre a oportunidade ou ideia."></textarea>
+              <small class="erro-campo" id="erro-mensagem" data-erro-para="mensagem"></small>
+            </div>
+            <button class="botao-pixel botao-pixel--principal enviar-formulario" type="submit">Preparar e-mail</button>
+            <p class="nota-formulario">O botão abrirá seu aplicativo de e-mail. Nenhum dado é armazenado pelo site.</p>
+            <p class="status-formulario" data-status-formulario role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape-site">
+      <div class="container rodape-interno">
+        <div>
+          <span class="marca-simbolo" aria-hidden="true">FC</span>
+          <p>Projetado para crescer junto com os próximos capítulos.</p>
+        </div>
+        <p>© <span data-ano-atual>2026</span> Felipe Carreira</p>
+      </div>
+    </footer>
+
+    <button class="voltar-topo botao-icone" type="button" data-voltar-topo aria-label="Voltar ao início">↑</button>
+  </body>
 </html>
-
-
-
