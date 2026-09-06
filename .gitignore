@@ -1,0 +1,7 @@
+# Guia pessoal: não enviar ao repositório.
+/docs/GUIA-DO-SITE.md
+README.md
+
+# Arquivos temporários do sistema.
+.DS_Store
+Thumbs.db

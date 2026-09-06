@@ -5,81 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felipe Carreira | Portfólio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Cabeçalho e menu -->
-    <header>
-        <nav class="container" aria-label="Menu principal">
-            <a href="index.html" class="nome">Felipe Carreira</a>
+    <header class="cabecalho">
+        <nav class="container navegacao" aria-label="Menu principal">
+            <a href="index.html" class="marca">Felipe Carreira</a>
             <ul class="lista-links">
-                <li><a href="#sobre-mim">Sobre mim</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#sobre-mim">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#formacao">Formação</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
-        <!-- Sobre mim -->
-        <section id="sobre-mim" class="conteudo">
-            <h1>Sobre mim</h1>
-            <p>Sou Felipe, estudante de <strong>Ciência da Computação</strong>. Tenho interesse em desenvolvimento back-end e de jogos, e estou buscando minha primeira oportunidade na área de tecnologia.</p>
-            <p>Gosto de resolver problemas e entender como as coisas funcionam. Ainda estou construindo minha experiência e aprendendo novas ferramentas, tanto na faculdade quanto nos meus estudos. Valorizo a organização e gosto de aprender com outras pessoas.</p>
+    <main class="container pagina">
+        <section class="apresentacao" aria-labelledby="titulo-apresentacao">
+            <h1 id="titulo-apresentacao">Felipe Carreira</h1>
+            <p class="apresentacao-resumo">Estudante de Ciência da Computação com foco em desenvolvimento <strong>Python</strong>, back-end e automação.</p>
+            <p class="texto-secundario">Busco minha primeira oportunidade na área de desenvolvimento de software.</p>
+            <div class="acoes">
+                <a class="botao botao-destaque" href="#projetos">Ver projetos</a>
+                <a class="botao" href="https://github.com/felipecarreira07" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="botao" href="https://www.linkedin.com/in/felipecarreira07/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
         </section>
 
-        <!-- Formação -->
-        <section id="formacao" class="conteudo">
-            <h2>Formação acadêmica</h2>
-            <div class="formacao-lista">
-                <article>
-                    <h3>Ensino Médio</h3>
-                    <p>Colégio Santa Rosa</p>
-                    <p>Concluído em 2024</p>
-                </article>
-                <article>
-                    <h3>Ciência da Computação</h3>
-                    <p>Faculdade Faci Wyden — Belém/PA</p>
-                    <p>Início: 2025</p>
-                    <p>Previsão de conclusão: 2029</p>
+        <section id="sobre-mim" class="conteudo">
+            <h2>Sobre mim</h2>
+            <p>Sou estudante de Ciência da Computação com foco em desenvolvimento de software utilizando Python. Tenho desenvolvido projetos próprios para praticar lógica de programação, orientação a objetos, estruturas de dados e organização de aplicações, com interesse principalmente em back-end e automação.</p>
+            <p>Atualmente busco minha primeira oportunidade profissional em desenvolvimento de software, onde possa aplicar e continuar desenvolvendo esses conhecimentos.</p>
+        </section>
+
+        <section id="projetos" class="conteudo">
+            <h2>Projetos</h2>
+            <div class="grupo-cards">
+                <!-- Duplique este article para adicionar outro projeto. -->
+                <article class="card card-destaque">
+                    <div class="card-cabecalho">
+                        <h3>Forge Path</h3>
+                        <span class="etiqueta">Em desenvolvimento</span>
+                    </div>
+                    <p>Projeto em Python para representar receitas, materiais e dependências de um sistema de crafting. A versão atual utiliza uma interface em terminal e permite selecionar receitas e visualizar suas árvores de dependência.</p>
+                    <ul class="etiquetas" aria-label="Tecnologias e conceitos do Forge Path">
+                        <li>Python</li>
+                        <li>CLI</li>
+                        <li>Estruturas de dados</li>
+                        <li>Lógica de programação</li>
+                    </ul>
+                    <a class="botao" href="https://github.com/felipecarreira07/Forge-Path" target="_blank" rel="noopener noreferrer">Ver Forge Path no GitHub</a>
                 </article>
             </div>
         </section>
 
-        <!-- Objetivos -->
-        <section id="objetivos" class="conteudo">
-            <h2>Objetivos profissionais</h2>
-            <p>Quero colocar em prática o que aprendo na faculdade e ganhar experiência com <strong>back-end</strong> e <strong>desenvolvimento de jogos</strong>. Busco uma oportunidade para aprender com profissionais mais experientes e contribuir com a equipe enquanto desenvolvo minhas habilidades.</p>
+        <section id="habilidades" class="conteudo">
+            <h2>Habilidades</h2>
+            <div class="grade grade-dupla">
+                <div class="card elevar">
+                    <h3>Linguagens</h3>
+                    <ul class="lista-marcadores">
+                        <li><strong class="texto-destaque">Python</strong> <span class="texto-pequeno texto-secundario">— foco principal</span></li>
+                        <li>Java</li>
+                        <li>C</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="card elevar">
+                    <h3>Ferramentas</h3>
+                    <ul class="lista-marcadores">
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+                <div class="card elevar">
+                    <h3>Conhecimentos</h3>
+                    <ul class="lista-marcadores">
+                        <li>Lógica de programação</li>
+                        <li>Programação orientada a objetos</li>
+                        <li>Estruturas de dados</li>
+                        <li>Desenvolvimento de aplicações em terminal</li>
+                    </ul>
+                </div>
+                <div class="card elevar">
+                    <h3>Interesses</h3>
+                    <ul class="lista-marcadores">
+                        <li>Desenvolvimento back-end</li>
+                        <li>Automação</li>
+                        <li>Desenvolvimento de jogos</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <!-- Habilidades e interesses -->
-        <section id="habilidades" class="conteudo">
-            <h2>Habilidades e interesses</h2>
-            <ul class="habilidades">
-                <li>Conhecimentos básicos de lógica de programação</li>
-                <li>Interesse em aprender Python, C, C#, Java e JavaScript</li>
-                <li>Organização e dedicação aos estudos</li>
-                <li>Facilidade em aprender e se adaptar</li>
-                <li>Trabalho em equipe e boa comunicação</li>
+        <section id="formacao" class="conteudo">
+            <h2>Formação</h2>
+            <article class="registro elevar">
+                <h3>Ciência da Computação</h3>
+                <p>Faci Wyden — Belém/PA</p>
+                <p class="texto-secundario">2025 — 2029 <span class="texto-pequeno">(conclusão prevista)</span></p>
+            </article>
+        </section>
+
+        <section id="contato" class="conteudo">
+            <h2>Contato</h2>
+            <ul class="grade">
+                <li><a class="card card-link elevar" href="https://github.com/felipecarreira07" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github" aria-hidden="true"></i> GitHub</a></li>
+                <li><a class="card card-link elevar" href="https://www.linkedin.com/in/felipecarreira07/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+                <li><a class="card card-link elevar" href="mailto:felipecarreira2020@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> E-mail</a></li>
             </ul>
+            <p class="contato-alternativo texto-pequeno texto-secundario">Também disponível pelo <a href="https://wa.me/5591986303982" target="_blank" rel="noopener noreferrer">WhatsApp</a>.</p>
         </section>
     </main>
 
-    <!-- Contato: altere os endereços abaixo quando precisar -->
-    <footer id="contato">
-        <div class="rodape container">
-            <h2>Contato</h2>
-            <ul class="lista-links contatos">
-                <li><a href="https://www.linkedin.com/in/felipe-carreira-9b0b5b365/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
-                <li><a href="https://wa.me/5591986303982" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
-                <li><a href="https://github.com/felipemassinha" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github" aria-hidden="true"></i> GitHub</a></li>
-                <li><a href="https://www.instagram.com/ca.felpsss/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram" aria-hidden="true"></i> Instagram</a></li>
-                <li><a href="mailto:felipecarreira2020@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> E-mail</a></li>
-            </ul>
-            <p class="copy">Desenvolvido por Felipe Carreira.</p>
-        </div>
+    <footer class="rodape">
+        <p class="texto-pequeno container">Desenvolvido por Felipe Carreira.</p>
     </footer>
 </body>
 </html>
